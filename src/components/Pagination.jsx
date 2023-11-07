@@ -34,7 +34,7 @@ const Pagination = ({ data, itemsPerPage, currentPage, setCurrentPage }) => {
         <SingleTour tripData={tripData} key={index} />
       ))}
 
-      <nav className='my-3'>
+      <div className='my-3'>
         <ul className="inline-flex -space-x-px text-sm">
           <li>
             <a
@@ -52,9 +52,11 @@ const Pagination = ({ data, itemsPerPage, currentPage, setCurrentPage }) => {
               <a
                 href="#"
                 onClick={() => setCurrentPage(index + 1)}
-                className={`flex  items-center justify-center px-3 h-8 leading-tight text-white bg-blue-700 border border-gray-300 hover:bg-gray-100 hover:text-gray-700 ${
+                className={`flex  items-center justify-center px-3 h-8 leading-tight text-white
+                 bg-blue-700 border border-gray-300 hover:bg-gray-100 hover:text-gray-700
+                  ${
                   index + 1 === currentPage
-                    ? 'text-blue-600 bg-blue-50 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white'
+                    ? 'text-blue-600 bg-blue-50 hover:bg-blue-100 hover:text-blue-700  dark:border-gray-700 dark:bg-gray-700 dark:text-white'
                     : ''
                 }`}
               >
@@ -74,7 +76,7 @@ const Pagination = ({ data, itemsPerPage, currentPage, setCurrentPage }) => {
             </a>
           </li>
         </ul>
-      </nav>
+      </div>
     </div>
   );
 };
