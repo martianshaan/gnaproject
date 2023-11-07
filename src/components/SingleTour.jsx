@@ -5,8 +5,7 @@ import React from 'react'
 
 const SingleTour = ({ tripData }) => {
 
-    const { duration, type, reviews, location, title, price, safety_measures, cancellation,
-        category, durationType, language, other, image } = tripData;
+    const { duration, type, reviews, location, title, price, image } = tripData;
     return (
         <div>
             <div className="grid grid-cols-4 gap-2 mb-3 pr-3 p-2 items-start mt-3 ">
@@ -41,7 +40,7 @@ const SingleTour = ({ tripData }) => {
                         </div>
                         <span>{reviews} reviews</span>
                         <p className='text-neutral-400 mt-6'>From</p>
-                        <p className='text-xl font-bold '> {price} </p>
+                        <p className='text-xl font-bold '> US${price} </p>
                         <p className='text-neutral-400 mb-3'>per adult</p>
                         <button className='flex gap-2 bg-blue-700 px-4 py-2' style={{ alignItems: 'center' }}>
                             <span className='text-white text-md'>View Detail</span>
