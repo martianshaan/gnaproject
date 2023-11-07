@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&family=Monoton&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+  :root {
+    --theme-color: #F5F5F5;
+    --primary-text-color: #252525;
+    --secondary-text-color: #807c77;
+  }
+  * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    /* For Firefox Browser */
+    scrollbar-width: thin;
+    scrollbar-color: currentColor #fff;
+  }
+  
+  /* For Chrome, EDGE, Opera, Others */
+  *::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.1);
+  }
+  
+  body {
+    background-color: var(--theme-color);
+    font-family: "Josefin Sans", sans-serif;
+  }
+  .font-monoton {
+    font-family: "Monoton", cursive;
+  }
+
+  @layer components {
+    .btn-primary {
+        @apply py-3 px-5 bg-white  text-gray-900 rounded-lg hover:bg-slate-200 disabled:bg-opacity-50 disabled:hover:bg-opacity-50;
+      }
+      .btn-secondary {
+        @apply py-3 px-5 border border-white rounded-lg hover:bg-white hover:text-gray-900 transition;
+      }
+      .btn-rounded-primary {
+        @apply border  bg-[--primary-text-color] text-white py-1.5   rounded-full px-6  transition hover:bg-gray-800;
+      }
+      .btn-rounded-secondary {
+        @apply border border-[--primary-text-color]  py-1.5   rounded-full px-6 hover:bg-[--primary-text-color] hover:text-white transition;
+      }
+  }
