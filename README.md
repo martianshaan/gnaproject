@@ -25,4 +25,4 @@ Follow these steps to install TripWeb:
 1. Clone the repository to your local machine:
 
    ```bash
-   git clone https://github.com/martianshaan/tripweb.git
+   git clone https://github.com/martianshaan/gnaproject.git
